@@ -1,0 +1,4 @@
+For the project you need the following python libraries:
+1.pandas
+2.nltk
+3.scikit-learn
