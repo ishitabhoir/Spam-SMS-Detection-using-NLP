@@ -44,7 +44,7 @@ print("TFIDF Vectorizer")
 tfidf = TfidfVectorizer()
 X = tfidf.fit_transform(df["clean_sms"])
 y = df["label"]
-X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2, random_state=50)
 model= MultinomialNB()
 model.fit(X_train, y_train)
 prediction= model.predict(X_test)
