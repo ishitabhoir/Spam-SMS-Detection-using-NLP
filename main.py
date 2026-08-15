@@ -48,11 +48,11 @@ X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2, random_st
 model= MultinomialNB()
 model.fit(X_train, y_train)
 prediction= model.predict(X_test)
-print("\nAccuracy:", accuracy_score(y_test, prediction))
+print("Accuracy:", accuracy_score(y_test, prediction))
 #This gives a table that includes columns like precision, recall, f1 score, support
-print("\nClassification Report")
+print("Classification Report")
 print(classification_report(y_test, prediction))
-print("\nConfusion Matrix")
+print("Confusion Matrix")
 print(confusion_matrix(y_test, prediction))
 
 # SMS Prediction
@@ -65,6 +65,6 @@ vector= tfidf.transform([clean_message])
 result= model.predict(vector)
 
 if result[0]== 1:
-    print("\nPrediction: The SMS is Spam")
+    print("Prediction: The SMS is Spam\n")
 else:
-    print("\nPrediction: The SMS is Ham")
+    print("Prediction: The SMS is Ham")
